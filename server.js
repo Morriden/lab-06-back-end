@@ -35,28 +35,28 @@ app.get('/location', (req, res) => {
         const resultGeo = transformGeo(geoData);
         res.json(resultGeo);
     } catch (e) {
-        console.error(e);
+        console.error('Hello');
 
         res.json({
-            status: 500,
-            responseText: e,
+            status: 404,
+            responseText: 'Hello',
         });
     }
 });
 
-app.get('/weather', (req, res) => {
-    try {
-        const result = transformWeather(weatherData);
-        res.json(result);
-    } catch (e) {
-        console.error(e);
+// app.get('/weather', (req, res) => {
+//     try {
+//         const result = transformWeather(weatherData);
+//         res.json(result);
+//     } catch (e) {
+//         console.error(e);
 
-        res.json({
-            status: 500,
-            responseText: e,
-        });
-    }
-});
+//         res.json({
+//             status: 500,
+//             responseText: e,
+//         });
+//     }
+// });
 
 
 
