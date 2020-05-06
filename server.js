@@ -12,8 +12,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 function transformGeo(data) {
-    const firstResult = data.results[0];
-    console.log(firstResult);
+    const firstResult = data[0];
+    console.log(firstResult, 'get it');
     return {
         formatted_query: firstResult.display_name,
         latitude: firstResult.lat,
