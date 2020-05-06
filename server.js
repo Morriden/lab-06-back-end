@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 function transformGeo(data) {
-    const firstResult = data[0];
+    const firstResult = data;
     console.log(firstResult, 'get it');
     return {
         formatted_query: firstResult.display_name,
