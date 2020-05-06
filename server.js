@@ -34,6 +34,7 @@ app.get('/location', (req, res) => {
     try {
         const resultGeo = transformGeo(geoData);
         res.json(resultGeo);
+        console.log(resultGeo, 'getit2');
     } catch (e) {
         console.error('Hello');
 
